@@ -39,14 +39,14 @@ public class UIMenu : MonoBehaviour
 
     public void AbrirPanel()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && !abrir)
+        if (Input.GetKeyDown(KeyCode.Alpha1) && !abrir)
         {
             ManagerEventos.DispararEventoDesabilitarControles();
             Cursor.lockState = CursorLockMode.Confined;
             abrir = true;
             panelOpciones.DOAnchorPos(Vector2.zero, 0.25f);      
         }
-        else if(Input.GetKeyDown(KeyCode.Escape) && abrir)
+        else if(Input.GetKeyDown(KeyCode.Alpha1) && abrir)
         {
             ManagerEventos.DispararEventoActivarControles();
             Cursor.lockState = CursorLockMode.Locked;
@@ -87,7 +87,7 @@ public class UIMenu : MonoBehaviour
         if (mostrarControles)
         {
             panelControles.gameObject.SetActive(true);
-            panelControles.DOAnchorPos(new Vector2(550f, -12.30432f), 0.25f);
+            panelControles.DOAnchorPos(new Vector2(380f, -12.30432f), 0.25f);
         }
         else
         {
